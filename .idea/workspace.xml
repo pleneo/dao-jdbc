@@ -74,11 +74,26 @@
       <option name="presentableId" value="Default" />
       <updated>1743786497452</updated>
       <workItem from="1743786498464" duration="7111000" />
-      <workItem from="1743798307963" duration="1953000" />
+      <workItem from="1743798307963" duration="2308000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/model/dao/implementation/SellerDaoJDBC.java</url>
+          <line>111</line>
+          <properties class="model.dao.implementation.SellerDaoJDBC" method="findById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -39,11 +39,17 @@ public class Main {
         System.out.println("Inserted! New id = " + newSeller.getId());
 
         System.out.println("\n\n--------- Seller Update  ---------");
-
         seller = sellerDao.findById(1);
         seller.setName("SpiderMan!");
         sellerDao.update(seller);
         System.out.println("Updated! Updated seller = " + seller);
+
+        System.out.println("\n\n--------- Seller DELETE  ---------");
+        seller = sellerDao.findById(10);
+        sellerDao.deleteById(10);
+        System.out.println("Deleted seller = " + seller);
+
+
 
     }
 }
