@@ -33,6 +33,11 @@ public class Main {
             System.out.println(s);
         }
 
+        System.out.println("\n\n--------- Seller insert ---------");
+        Seller newSeller = new Seller(null, "Diogo", "diogo@diogo.com", new Date(), 5000.00, dep);
+//        sellerDao.insert(newSeller);
+        System.out.println("Inserted! New id = " + newSeller.getId());
+
 
     }
 }
