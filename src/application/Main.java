@@ -26,6 +26,13 @@ public class Main {
             System.out.println(s);
         }
 
+        System.out.println("\n\n--------- Seller findAll ---------");
+
+        sellers = sellerDao.findAll();
+        for(Seller s : sellers){
+            System.out.println(s);
+        }
+
 
     }
 }
