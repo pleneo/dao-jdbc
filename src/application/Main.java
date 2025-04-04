@@ -14,6 +14,8 @@ public class Main {
 
         ISellerDao sellerDao = DaoFactory.createSellerDao();
 
+        System.out.println("--------- Seller findById ---------");
+
         Seller seller = sellerDao.findById(3);
         System.out.println(seller);
 

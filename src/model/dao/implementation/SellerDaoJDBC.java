@@ -49,17 +49,9 @@ public class SellerDaoJDBC implements ISellerDao {
             st.setInt(1, id);
             rs = st.executeQuery();
             if(rs.next()){
-                Department dep = new Department();
-                dep.setId(rs.getInt("DepartmentId"));
-                dep.setName(rs.getString("DepName"));
+                Department dep = instantiateDepartment(rs);
 
-                Seller seller = new Seller();
-                seller.setId(rs.getInt("Id"));
-                seller.setName(rs.getString("Name"));
-                seller.setEmail(rs.getString("Email"));
-                seller.setBaseSalary(rs.getDouble("BaseSalary"));
-                seller.setBirthDate(rs.getDate("BirthDate"));
-                seller.setDepartment(dep);
+                Seller seller = instantiateSeller(dep ,rs);
                 return seller;
             }
             return null;
@@ -77,4 +69,24 @@ public class SellerDaoJDBC implements ISellerDao {
     public List<Seller> findAll() {
         return null;
     }
+
+    private Department instantiateDepartment(ResultSet rs) throws SQLException {
+        Department dep = new Department();
+        dep.setId(rs.getInt("DepartmentId"));
+        dep.setName(rs.getString("DepName"));
+        return dep;
+    }
+
+    private Seller instantiateSeller(Department dep, ResultSet rs) throws SQLException {
+        Seller seller = new Seller();
+        seller.setId(rs.getInt("Id"));
+        seller.setName(rs.getString("Name"));
+        seller.setEmail(rs.getString("Email"));
+        seller.setBaseSalary(rs.getDouble("BaseSalary"));
+        seller.setBirthDate(rs.getDate("BirthDate"));
+        seller.setDepartment(dep);
+        return seller;
+    }
+
+
 }
